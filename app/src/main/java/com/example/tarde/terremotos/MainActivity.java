@@ -1,5 +1,7 @@
 package com.example.tarde.terremotos;
 
+import android.app.FragmentManager;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,12 +10,23 @@ import android.view.MenuItem;
 
 public class MainActivity extends ActionBarActivity {
 
+    private ListadoFrangment listadoFrangment;
+    private BusquedaFragment busquedaFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FragmentManager fragmentManager = getFragmentManager();
+        busquedaFragment = (BusquedaFragment)fragmentManager.findFragmentById(R.id.fragmentoBusqueda);
+        listadoFrangment= (ListadoFrangment)fragmentManager.findFragmentById(R.id.fragmentoListado);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

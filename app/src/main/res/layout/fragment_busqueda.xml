@@ -1,0 +1,56 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="1"
+    android:rowCount="5"
+    tools:context="com.example.tarde.terremotos.BusquedaFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/select_intensidad"
+        android:id="@+id/textIntensidad"
+        android:layout_alignParentStart="true"
+        style="@style/AppTheme"
+        android:fontFamily="@string/abc_action_bar_home_description"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_row="0"
+        android:layout_column="0" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:id="@+id/spinner"
+        android:entries="@array/intensidad_array"
+        android:layout_below="@+id/textIntensidad"
+        style="@style/Base.Widget.AppCompat.DropDownItem.Spinner"
+        android:layout_gravity="left|center_vertical"
+        android:layout_row="1"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:text="@string/select_fecha"
+        android:id="@+id/textFecha"
+        android:layout_gravity="left|bottom"
+        android:layout_row="2"
+        android:layout_column="0" />
+
+    <DatePicker
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/datePicker"
+        android:calendarViewShown="false"
+        android:layout_row="3"
+        android:layout_column="0" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/buscar"
+        android:id="@+id/btBuscar"
+        android:layout_row="4"
+        android:layout_column="0" />
+
+
+</GridLayout>
